@@ -1,0 +1,30 @@
+.footer {
+  background-color: #d3e8b0; /* Vert pâle pour le fond */
+  color: #333; /* Couleur du texte */
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Légère ombre */
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espacement entre les liens */
+}
+
+.footer-links li a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.footer-links li a:hover {
+  text-decoration: underline;
+}

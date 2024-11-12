@@ -1,0 +1,13 @@
+.sitemap {
+  padding: 20px;
+  text-align: left;
+}
+
+.sitemap a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.sitemap a:hover {
+  text-decoration: underline;
+}

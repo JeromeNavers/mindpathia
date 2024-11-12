@@ -1,0 +1,12 @@
+/* Styles spécifiques à la page À propos */
+.page-container {
+  padding: 20px;
+}
+
+h1 {
+  color: #4CAF50;
+}
+
+p {
+  color: #333;
+}

@@ -1,0 +1,57 @@
+.hamburger-menu {
+  position: fixed; /*Utilisation de "fixed" pour garder le menu toujours visible en haut à droite */
+  top: 20px; /* Décalage du menu depuis le haut */
+  right: 20px; /* Décalage du menu hamburger depuis la droite de l'écran */
+}
+
+.hamburger-button {
+  font-size: 15px;  /* Taille réduite pour un menu plus discret */
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4CAF50;  /* Vert clair */
+  transition: color 0.3s ease;  /* Effet au survol du bouton */
+}
+
+.hamburger-button:hover {
+  color: #7b8e38;  /* Un vert un peu plus foncé au survol du bouton */
+}
+
+.menu {
+  position: absolute;
+  top: 25px;  /* Espacement du menu depuis le haut */
+  right: 100%; /* Positionner le menu à gauche du bouton */
+  background-color: #89af4c;  /* Vert clair */
+  padding: 25px;
+  border-radius: 10px;
+  opacity: 0;  /* Le menu est caché par défaut */
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Effet de transition pour l'apparition du menu */
+}
+
+.hamburger-button:hover + .menu, /* Affiche le menu lorsque la souris survole le bouton */
+.menu:hover {
+  opacity: 1; /* Affiche le menu avec une transition */
+  visibility: visible;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  margin: 5px 0;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 10px; /* Taille des liens réduite pour discrétion */
+  transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+  color: #33adff;  /* Couleur jaune au survol des liens */
+}

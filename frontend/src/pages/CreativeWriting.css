@@ -1,0 +1,98 @@
+/* CreativeWritting.css */
+.creative-writing-container {
+  padding: 20px;
+}
+
+.creative-writing-box {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.creative-responses {
+  margin-top: 20px;
+}
+
+.response {
+  padding: 8px;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.response.psychiatric {
+  background-color: #e0f7fa;
+}
+
+.response.philosophical {
+  background-color: #e8f5e9;
+}
+
+.response.spiritual {
+  background-color: #f3e5f5;
+}
+
+.response.suggestion {
+  background-color: #fff3e0;
+  font-style: italic;
+}
+
+.saved-entries {
+  margin-top: 20px;
+}
+
+.saved-entries ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.saved-entries li {
+  padding: 8px;
+  background-color: #e0e0e0;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+footer button {
+  background-color: #f44336;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+footer button::before {
+  content: '←'; /* Flèche de retour */
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+footer button:hover {
+  background-color: #e53935;
+}

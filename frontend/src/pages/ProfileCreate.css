@@ -1,0 +1,90 @@
+.profile-create {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f7fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin: 40px auto;
+}
+
+.profile-create h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.profile-create input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.profile-create input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.profile-create button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-create button:hover {
+  background-color: #0056b3;
+}
+
+.profile-create button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.password-input-container {
+  display: flex;
+  align-items: center;
+}
+
+.password-criteria {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.password-criteria p {
+  margin: 5px 0;
+}
+
+.password-criteria p.valid {
+  color: green;
+}
+
+.password-criteria p.invalid {
+  color: red;
+}
+
+.profile-create p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
