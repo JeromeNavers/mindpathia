@@ -13,6 +13,4 @@
 [context.deploy-preview.environment]
   NODE_ENV = "development"            # Pour les environnements de preview de déploiement
 
-# Optionnel : configurations spécifiques de cache pour optimiser le temps de build
-[[plugins]]
-  package = "@netlify/plugin-cache"
+
