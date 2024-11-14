@@ -1,3 +1,11 @@
+/* Réinitialisation des marges et padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body global - styles de base */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +13,74 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f4f4;
+  line-height: 1.6;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* App global */
+.App {
+  display: flex;
+  flex-direction: column; /* Positionnement vertical pour les écrans de type mobile et tablette */
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;  /* Position relative pour garder une référence de positionnement pour les enfants */
+}
+
+/* Mobile - pour petits écrans, max-width: 600px */
+@media (max-width: 600px) {
+  .footer-links {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-links li {
+    margin: 5px 0;
+  }
+
+  .App {
+    padding: 10px;
+  }
+
+  /* Enlever la disposition horizontale sur mobile */
+  .hamburger-menu {
+    display: block;
+  }
+}
+
+/* Tablettes - ajustements pour écrans entre 600px et 768px */
+@media (max-width: 768px) {
+  .App {
+    padding: 15px;
+  }
+
+  /* Assurez-vous que le menu horizontal n'apparait pas sur les tablettes */
+  .menu-horizontal {
+    display: none;
+  }
+
+  /* Afficher le menu hamburger uniquement sur ces écrans */
+  .hamburger-menu {
+    display: block;
+  }
+}
+
+/* Bureau - pour écrans plus larges (min-width: 769px) */
+@media (min-width: 769px) {
+  .App {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centrer l'app sur des écrans larges */
+  }
+
+  /* Afficher le menu horizontal sur les écrans larges */
+  .menu-horizontal {
+    display: flex; /* Assure l'affichage horizontal du menu */
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  /* Cacher le menu hamburger sur les grands écrans */
+  .hamburger-menu {
+    display: none;
+  }
 }

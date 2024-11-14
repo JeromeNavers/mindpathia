@@ -24,11 +24,11 @@
 /* Style des champs de saisie pour la connexion */
 .profile-login input {
   width: 100%;
-  padding: 8px;
+  padding: 8px;  /* Taille réduite des champs */
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 14px;  /* Taille de police réduite */
   box-sizing: border-box;
   transition: border-color 0.3s ease;
 }
@@ -81,57 +81,3 @@
 .profile-login a:hover {
   text-decoration: underline;
 }
-
-/* Media queries pour la gestion responsive */
-
-/* Pour les écrans de taille moyenne (tablettes, par exemple) */
-@media (max-width: 768px) {
-  .profile-login {
-    padding: 15px;
-    max-width: 90%;
-    margin: 20px auto;
-  }
-
-  .profile-login h1 {
-    font-size: 22px;
-  }
-
-  .profile-login input {
-    padding: 10px;
-    font-size: 16px;
-  }
-
-  .profile-login button {
-    padding: 12px 25px;
-    font-size: 18px;
-  }
-}
-
-/* Pour les petits écrans (téléphones mobiles, par exemple) */
-@media (max-width: 480px) {
-  .profile-login {
-    padding: 10px;
-    max-width: 95%;
-    margin: 10px auto;
-  }
-
-  .profile-login h1 {
-    font-size: 20px;
-  }
-
-  .profile-login input {
-    padding: 12px;
-    font-size: 18px;
-  }
-
-  .profile-login button {
-    padding: 14px 30px;
-    font-size: 20px;
-  }
-
-  /* Uniformisation des marges pour les petits écrans */
-  .profile-login p {
-    margin-top: 10px;
-  }
-}
-

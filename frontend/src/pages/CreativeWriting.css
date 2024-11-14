@@ -1,98 +1,42 @@
-/* CreativeWritting.css */
-.creative-writing-container {
-  padding: 20px;
-}
-
-.creative-writing-box {
-  background-color: #f0f0f0;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-textarea {
-  width: 100%;
-  height: 150px;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
+/* Ajout des styles pour le bouton et la flèche */
+.send-button {
+  width: 40px; /* Taille du rond */
+  height: 40px;
   background-color: #4caf50;
   color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   border: none;
+  transition: background-color 0.3s;
 }
 
-button:hover {
+.send-button:hover {
   background-color: #45a049;
 }
 
-.creative-responses {
-  margin-top: 20px;
+.send-button:disabled {
+  background-color: #e0e0e0; /* Gris lorsque désactivé */
 }
 
-.response {
-  padding: 8px;
-  border-radius: 5px;
-  margin: 5px 0;
+.arrow {
+  font-size: 24px; /* Taille de la flèche */
+  transform: rotate(90deg); /* Flèche pointant vers le haut */
+  margin-top: 2px; /* Ajuster légèrement la position de la flèche */
 }
 
-.response.psychiatric {
-  background-color: #e0f7fa;
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #4caf50;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
 }
 
-.response.philosophical {
-  background-color: #e8f5e9;
-}
-
-.response.spiritual {
-  background-color: #f3e5f5;
-}
-
-.response.suggestion {
-  background-color: #fff3e0;
-  font-style: italic;
-}
-
-.saved-entries {
-  margin-top: 20px;
-}
-
-.saved-entries ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.saved-entries li {
-  padding: 8px;
-  background-color: #e0e0e0;
-  margin: 5px 0;
-  border-radius: 5px;
-}
-
-footer button {
-  background-color: #f44336;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-
-footer button::before {
-  content: '←'; /* Flèche de retour */
-  font-size: 18px;
-  margin-right: 8px;
-}
-
-footer button:hover {
-  background-color: #e53935;
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

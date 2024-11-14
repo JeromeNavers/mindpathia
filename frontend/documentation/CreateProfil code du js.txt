@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/icons/logo.png';
-import { useUser } from '../contexts/UserContext'; // Importer le contexte utilisateur
 
 const ProfileCreate = () => {
-  const [pseudo, setPseudo] = useState(''); // State pour le pseudo
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -14,9 +12,8 @@ const ProfileCreate = () => {
     hasNumber: false,
     hasSpecialChar: false,
   });
-  const [isFormValid, setIsFormValid] = useState(false); // State pour vérifier la validité du formulaire
+  const [isFormValid, setIsFormValid] = useState(false); // Nouveau state pour vérifier la validité du formulaire
   const navigate = useNavigate();
-  const { setUsername } = useUser(); // Fonction pour définir le pseudo dans le contexte utilisateur
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,11 +23,8 @@ const ProfileCreate = () => {
       return;
     }
 
-    // Enregistrer le pseudo dans le contexte utilisateur
-    setUsername(pseudo);
-
-    // Redirige vers l'espace personnel
-    navigate('/user-profile');
+    // Logique de création de compte ici
+    navigate('/user-profile');  // Redirige vers l'espace personnel
   };
 
   const handlePasswordChange = (e) => {
@@ -59,13 +53,6 @@ const ProfileCreate = () => {
       <img src={logo} alt="Logo" className="logo" />
       <h1>Créer un compte</h1>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Pseudo"
-          value={pseudo}
-          onChange={(e) => setPseudo(e.target.value)}
-          required
-        />
         <input
           type="email"
           placeholder="Adresse email"

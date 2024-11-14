@@ -1,37 +1,45 @@
+/* HamburgerMenu.css */
+
+/* Positionnement fixe du bouton hamburger */
 .hamburger-menu {
-  position: fixed; /*Utilisation de "fixed" pour garder le menu toujours visible en haut à droite */
-  top: 20px; /* Décalage du menu depuis le haut */
-  right: 20px; /* Décalage du menu hamburger depuis la droite de l'écran */
+  position: fixed;
+  top: 20px;    /* Espacement du haut */
+  right: 20px;  /* Espacement de la droite */
+  z-index: 1000;  /* S'assurer qu'il reste visible au-dessus de tout */
+  display: none;  /* Cacher le menu hamburger par défaut */
 }
 
+/* Bouton hamburger */
 .hamburger-button {
-  font-size: 15px;  /* Taille réduite pour un menu plus discret */
+  font-size: 30px;
   background: none;
   border: none;
   cursor: pointer;
-  color: #4CAF50;  /* Vert clair */
-  transition: color 0.3s ease;  /* Effet au survol du bouton */
+  color: #4CAF50;
+  transition: color 0.3s ease;
 }
 
 .hamburger-button:hover {
-  color: #7b8e38;  /* Un vert un peu plus foncé au survol du bouton */
+  color: #7b8e38;  /* Couleur au survol */
 }
 
+/* Le menu, qui est caché au départ */
 .menu {
   position: absolute;
-  top: 25px;  /* Espacement du menu depuis le haut */
-  right: 100%; /* Positionner le menu à gauche du bouton */
-  background-color: #89af4c;  /* Vert clair */
-  padding: 25px;
+  top: 50px;     /* Menu juste en dessous du bouton */
+  right: 0;
+  background-color: #89af4c;
+  padding: 15px;
   border-radius: 10px;
-  opacity: 0;  /* Le menu est caché par défaut */
+  opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease; /* Effet de transition pour l'apparition du menu */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.hamburger-button:hover + .menu, /* Affiche le menu lorsque la souris survole le bouton */
+/* Quand le bouton est cliqué ou survolé, on affiche le menu */
+.hamburger-button:hover + .menu,
 .menu:hover {
-  opacity: 1; /* Affiche le menu avec une transition */
+  opacity: 1;
   visibility: visible;
 }
 
@@ -48,10 +56,45 @@
 .menu ul li a {
   color: white;
   text-decoration: none;
-  font-size: 10px; /* Taille des liens réduite pour discrétion */
-  transition: color 0.3s ease;
+  font-size: 16px;
 }
 
 .menu ul li a:hover {
-  color: #33adff;  /* Couleur jaune au survol des liens */
+  color: #33adff;
+}
+
+/* Mobile - ajustement pour petits écrans */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block; /* Affiche le menu hamburger sur petits écrans */
+  }
+
+  .menu {
+    top: 40px;
+    right: 0;
+    padding: 20px;
+  }
+
+  .menu ul li a {
+    font-size: 14px;
+  }
+}
+
+/* Tablette - ajustement pour écrans moyens */
+@media (max-width: 1024px) {
+  .hamburger-menu {
+    top: 15px;
+    right: 15px;
+  }
+
+  .menu {
+    top: 45px;
+  }
+}
+
+/* Bureau - Réglage pour écrans larges (supérieurs à 768px) */
+@media (min-width: 769px) {
+  .hamburger-menu {
+    display: none; /* Cache le menu hamburger sur les grands écrans */
+  }
 }

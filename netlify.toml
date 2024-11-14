@@ -1,0 +1,18 @@
+[build]
+  # Commande de build que Netlify exécutera pour préparer votre site
+  command = "npm run build"           # Si vous avez une commande spécifique pour build votre projet
+  publish = "build"                   # Répertoire où se trouvent les fichiers à déployer (par exemple, build pour React)
+
+[functions]
+  # Répertoire des fonctions serverless si vous en avez (optionnel)
+  directory = "netlify/functions"     # Assurez-vous que ce répertoire existe dans votre projet
+
+[context.production.environment]
+  NODE_ENV = "production"             # Assurez-vous que le mode production est bien défini
+
+[context.deploy-preview.environment]
+  NODE_ENV = "development"            # Pour les environnements de preview de déploiement
+
+# Optionnel : configurations spécifiques de cache pour optimiser le temps de build
+[[plugins]]
+  package = "@netlify/plugin-cache"

@@ -15,7 +15,7 @@ const HomePage = () => {
     <div className="home-container">
       {/* Afficher le logo avant le clic */}
       <div className="logo-container">
-      <img src={logo} alt="Logo" className="logo" />
+        <img src={logo} alt="Logo" className="logo" />
       </div>
 
       {/* Modifier le message d'accueil pour quelque chose de plus serein */}

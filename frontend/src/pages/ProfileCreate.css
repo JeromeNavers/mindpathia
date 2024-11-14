@@ -1,4 +1,5 @@
-.profile-create {
+/* Style général pour le conteneur de création de profil */
+.create-profile-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,31 +11,37 @@
   width: 100%;
   max-width: 400px;
   margin: 40px auto;
+  font-family: 'Arial', sans-serif; /* Changement de la police de base */
 }
 
-.profile-create h2 {
+/* Titre du formulaire */
+.create-profile-container h1 {
   color: #333;
-  font-size: 24px;
+  font-size: 26px; /* Augmenté légèrement pour être plus visible */
   margin-bottom: 20px;
+  font-family: 'Arial', sans-serif; /* Appliquer la même police */
 }
 
-.profile-create input {
+/* Style des champs de saisie */
+.create-profile-container input {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+  padding: 10px; /* Augmenté pour améliorer la lisibilité */
+  margin: 8px 0; /* Espacement plus léger */
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 15px; /* Augmenté pour meilleure lisibilité */
   box-sizing: border-box;
+  font-family: 'Arial', sans-serif; /* Assurer que la police est la même partout */
 }
 
-.profile-create input:focus {
+.create-profile-container input:focus {
   border-color: #007bff;
   outline: none;
 }
 
-.profile-create button {
-  padding: 10px 20px;
+/* Style du bouton de soumission */
+.create-profile-container button {
+  padding: 12px 20px;
   background-color: #007bff;
   color: white;
   border: none;
@@ -42,22 +49,20 @@
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
 }
 
-.profile-create button:hover {
+.create-profile-container button:hover {
   background-color: #0056b3;
 }
 
-.profile-create button:disabled {
+.create-profile-container button:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
 }
 
-.password-input-container {
-  display: flex;
-  align-items: center;
-}
-
+/* Style pour les critères de validation du mot de passe */
 .password-criteria {
   font-size: 14px;
   color: #666;
@@ -67,6 +72,8 @@
 
 .password-criteria p {
   margin: 5px 0;
+  display: flex;
+  align-items: center;
 }
 
 .password-criteria p.valid {
@@ -77,14 +84,85 @@
   color: red;
 }
 
-.profile-create p {
+/* Style des erreurs */
+.create-profile-container p {
   font-size: 14px;
   color: #666;
   margin-top: 10px;
 }
 
+/* Erreurs spécifiques */
 .error {
   color: red;
   font-size: 12px;
   margin-top: 5px;
+}
+
+/* RESPONSIVE STYLES */
+
+/* Mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+  .create-profile-container {
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 90%;
+  }
+
+  .create-profile-container h1 {
+    font-size: 20px;
+  }
+
+  .create-profile-container input,
+  .create-profile-container button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .password-criteria p {
+    font-size: 12px;
+  }
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .create-profile-container {
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 80%;
+  }
+
+  .create-profile-container h1 {
+    font-size: 22px;
+  }
+
+  .create-profile-container input,
+  .create-profile-container button {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .password-criteria p {
+    font-size: 13px;
+  }
+}
+
+/* Desktop (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .create-profile-container {
+    max-width: 400px;
+  }
+
+  .create-profile-container h1 {
+    font-size: 26px; /* Adapté pour écran plus large */
+  }
+
+  .create-profile-container input,
+  .create-profile-container button {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .password-criteria p {
+    font-size: 14px;
+  }
 }

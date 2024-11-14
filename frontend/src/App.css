@@ -1,137 +1,100 @@
-/* App.css */
-
-/* Mise en page de base */
-body {
-  font-family: Arial, sans-serif;
+/* Réinitialisation des marges et padding */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f4f4f4;
 }
 
-/* Style du conteneur principal */
+/* Body global - styles de base */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif; /* Modifier si besoin */
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+
+/* App global */
 .App {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   min-height: 100vh;
-}
-
-/* Style du menu de navigation */
-nav {
-  background-color: #333;
-  width: 100%;
-  padding: 10px 0;
-  margin-bottom: 20px;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-}
-
-nav li {
-  margin: 0 15px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  padding: 8px 16px;
-  display: inline-block;
-}
-
-nav a:hover {
-  background-color: #575757;
-  border-radius: 4px;
-}
-
-/* Style du bouton "Commencer" sur la page d'accueil */
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 15px 32px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-/* Style des titres sur la page d'accueil */
-h1 {
-  font-size: 36px;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-/* Style des sections de l'application */
-section {
   padding: 20px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  width: 90%;
-  max-width: 600px;
+  position: relative;
 }
 
-/* Style des éléments du formulaire */
-input, button {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+/* Menu horizontal pour les écrans larges */
+@media (min-width: 769px) {
+  .App {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .menu-horizontal {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #4cafaa; /* Bandeau vert d'eau */
+    padding: 15px 0;
+    border-radius: 5px;
+  }
+
+  .menu-horizontal ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+  .menu-horizontal ul li {
+    margin: 0 20px;
+  }
+
+  .menu-horizontal ul li a {
+    color: #ffffff; /* Couleur douce pour le texte */
+    font-size: 18px;
+    font-family: 'Verdana', sans-serif; /* Police douce, remplace si souhaité */
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .menu-horizontal ul li a:hover {
+    color: #e6e6e6; /* Couleur légèrement plus claire au survol */
+  }
 }
 
-input[type="text"], input[type="password"] {
-  font-size: 16px;
+/* Mobile - pour petits écrans, max-width: 600px */
+@media (max-width: 600px) {
+  .footer-links {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-links li {
+    margin: 5px 0;
+  }
+
+  .App {
+    padding: 10px;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
 }
 
-/* Style pour la page de login et d'inscription */
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Tablettes - ajustements pour écrans entre 600px et 768px */
+@media (max-width: 768px) {
+  .App {
+    padding: 15px;
+  }
+
+  .menu-horizontal {
+    display: none; /* Cacher le menu horizontal sur les tablettes */
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
 }
 
-/* Pour le footer ou d'autres sections (si nécessaire) */
-.footer {
-  background-color: #d3e8b0; /* Vert pâle pour le fond */
-  color: #333; /* Couleur du texte */
-  padding: 15px;
-  text-align: center;
-  font-size: 14px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Légère ombre */
-}
-
-.footer-links {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* Espacement entre les liens */
-}
-
-.footer-links li a {
-  color: #007BFF;
-  text-decoration: none;
-}
-
-.footer-links li a:hover {
-  text-decoration: underline;
-}

@@ -1,0 +1,38 @@
+D'accord, voici une feuille de route pour la page ProfileLogin.js et ProfileLogin.css, ainsi que pour la fonctionnalité de réinitialisation du mot de passe :
+
+Feuille de Route pour ProfileLogin.js / ProfileLogin.css
+1. Réduction de la taille des champs
+Objectif : Réduire la taille des champs de saisie pour l'adresse email et le mot de passe, afin qu'ils soient plus légers et adaptés à un design plus fluide.
+Action : Modifications dans le fichier .css (dimensions, padding, etc.).
+2. Placer le bouton "Se connecter"
+Objectif : Placer le bouton Se connecter directement sous le champ de mot de passe.
+Action : Assurer que le bouton soit bien centré et espacés de manière appropriée sous le dernier champ de saisie.
+3. Ajouter un lien pour mot de passe perdu
+Objectif : Ajouter un lien qui redirige vers un formulaire de réinitialisation de mot de passe.
+Action :
+Créer un lien sous le bouton "Se connecter" avec un texte comme "Mot de passe oublié ?".
+Ce lien redirigera vers une page de réinitialisation de mot de passe (nous créerons cette page plus tard).
+Préparer l'UI pour que le lien soit clair et visible, mais discret pour ne pas encombrer l'interface.
+4. Créer la page de réinitialisation de mot de passe
+Objectif : Créer un formulaire pour la réinitialisation du mot de passe avec les étapes suivantes :
+Demander à l'utilisateur de saisir son adresse email.
+Après validation de l'email, envoyer un lien de réinitialisation de mot de passe par email.
+Permettre à l'utilisateur de choisir un nouveau mot de passe après avoir validé l'email de réinitialisation.
+5. Validation de l'email et gestion des erreurs
+Objectif : S'assurer que l'email soit valide et correctement formaté avant de soumettre le formulaire.
+Action :
+Ajouter une validation de format d'email dans ProfileLogin.js.
+Afficher un message d'erreur si l'email est incorrect ou manquant.
+6. UI / UX
+Objectif : Assurer que la présentation générale est fluide, claire et agréable à utiliser.
+Action :
+Adapter les éléments visuels (champs de saisie, bouton, texte du lien) en fonction de la taille de l'écran.
+Gérer les marges et espacements pour éviter que l'interface ne soit trop encombrée.
+Ajouter des animations subtiles au survol des boutons ou des liens.
+Prochaines étapes :
+Étape 1 : Réduire la taille des champs de saisie dans ProfileLogin.css.
+Étape 2 : Placer le bouton "Se connecter" sous le champ de mot de passe et le centrer.
+Étape 3 : Ajouter un lien pour le mot de passe oublié sous le bouton de connexion.
+Étape 4 : Vérification de l'email et ajout des validations nécessaires dans ProfileLogin.js.
+Étape 5 : Créer un formulaire de réinitialisation de mot de passe plus tard.
+Une fois la feuille de route validée, on pourra passer à la mise en œuvre des différents points. Est-ce que cela te convient ?

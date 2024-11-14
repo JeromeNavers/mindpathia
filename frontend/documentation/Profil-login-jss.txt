@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // Assure-toi d'importer useNavigate
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';  // Utiliser useNavigate pour la redirection
 import logo from '../assets/icons/logo.png';
 
 const ProfileLogin = ({ onLogin }) => {
@@ -44,16 +44,6 @@ const ProfileLogin = ({ onLogin }) => {
     navigate('/user-profile');  // Redirige vers l'espace personnel
   };
 
-  // Fonction pour rediriger vers la page de création de profil
-  const handleCreateProfile = () => {
-    navigate('/create-account');  // Redirige vers la page de création de compte
-  };
-
-  // Fonction pour rediriger vers la page "Mot de passe oublié"
-  const handleForgotPassword = () => {
-    navigate('/forgot-password');  // Redirige vers la page de mot de passe oublié
-  };
-
   return (
     <div className="profile-login">
       {/* Affiche le logo ici */}
@@ -81,19 +71,8 @@ const ProfileLogin = ({ onLogin }) => {
         <button type="submit">Se connecter</button>
       </form>
 
-      {/* Lien pour rediriger vers la page de création de profil */}
       <p>
-        Pas encore de compte ?{' '}
-        <span onClick={handleCreateProfile} style={{ color: '#007bff', cursor: 'pointer', textDecoration: 'underline' }}>
-          Créer un compte
-        </span>
-      </p>
-
-      {/* Lien pour la récupération du mot de passe */}
-      <p>
-        <span onClick={handleForgotPassword} style={{ color: '#007bff', cursor: 'pointer', textDecoration: 'underline' }}>
-          Mot de passe oublié ?
-        </span>
+        <a href="/reset-password">Mot de passe oublié ?</a>
       </p>
     </div>
   );

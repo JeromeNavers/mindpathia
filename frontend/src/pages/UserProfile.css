@@ -1,5 +1,6 @@
 /* UserProfile.css */
 
+/* Style de base pour la page de profil utilisateur */
 .user-profile-container {
   display: flex;
   flex-direction: column;
@@ -23,13 +24,16 @@ header {
   margin-top: 30px;
 }
 
-/* Boutons de navigation vers les pages Journal Personnel et Création Écrite */
+/* Style des boutons de navigation */
 .navigation-buttons {
   display: flex;
+  flex-direction: row;
   gap: 10px;
   margin-top: 15px;
+  justify-content: center;
 }
 
+/* Adaptation des boutons */
 .navigate-button {
   background-color: #007bff;
   color: white;
@@ -45,6 +49,7 @@ header {
   background-color: #0056b3;
 }
 
+/* Section conversation */
 .conversation-box {
   display: flex;
   flex-direction: column;
@@ -68,8 +73,8 @@ header {
   text-align: left;
 }
 
-.conversation .ai-psychiatric, 
-.conversation .ai-philosophical, 
+.conversation .ai-psychiatric,
+.conversation .ai-philosophical,
 .conversation .ai-spiritual {
   background-color: #e0e0e0;
   padding: 10px;
@@ -78,6 +83,7 @@ header {
   text-align: left;
 }
 
+/* Section d'entrée de texte */
 .input-section {
   display: flex;
   justify-content: space-between;
@@ -120,4 +126,88 @@ footer button {
 
 footer button:hover {
   background-color: #e53935;
+}
+
+/* Media Queries pour les écrans de différentes tailles */
+
+/* Pour les écrans de taille moyenne (tablettes) */
+@media (max-width: 768px) {
+  .user-profile-container {
+    padding: 15px;
+  }
+
+  .logo {
+    height: 35px;
+  }
+
+  .navigation-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigate-button {
+    font-size: 1em;
+    padding: 12px 24px;
+  }
+
+  .conversation {
+    max-width: 90%;
+  }
+
+  .input-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input {
+    width: 70%;
+    font-size: 0.9em;
+  }
+
+  button {
+    font-size: 0.9em;
+    padding: 12px;
+  }
+}
+
+/* Pour les petits écrans (mobiles) */
+@media (max-width: 480px) {
+  .user-profile-container {
+    padding: 10px;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .navigation-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .navigate-button {
+    font-size: 0.9em;
+    padding: 10px 20px;
+  }
+
+  .conversation {
+    max-width: 100%;
+  }
+
+  .input-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  input {
+    width: 80%;
+    font-size: 0.85em;
+  }
+
+  button {
+    font-size: 0.85em;
+    padding: 10px;
+  }
 }
